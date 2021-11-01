@@ -37,7 +37,7 @@ resource "vsphere_virtual_machine" "learn" {
   datastore_id     = data.vsphere_datastore.datastore.id
 
   num_cpus = 2
-  memory   = 1024
+  memory   = 2048
 
   network_interface {
     network_id = data.vsphere_network.network.id
@@ -49,7 +49,7 @@ resource "vsphere_virtual_machine" "learn" {
   disk {
     label            = "disk0"
     thin_provisioned = true
-    size             = 32
+    size             = 64
   }
 
   guest_id = "ubuntu64Guest"
